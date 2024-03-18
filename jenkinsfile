@@ -36,6 +36,13 @@ pipeline {
         always {
             echo 'Deleting Project now !! '
             deleteDir()
+            
+            post {
+                always {
+                    echo 'Deleting Project now !! '
+                    deleteDir()
+                }
+            }
         }
     }
 }
